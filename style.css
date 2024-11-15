@@ -22,7 +22,7 @@ body {
 .sectionSemBorda {
     margin-bottom: 20px;
     text-align: center;
-   
+
 }
 
 .sectionCronometro {
@@ -60,6 +60,11 @@ body {
     background-color: #28a745;
     color: #fff;
     transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn#resetarBtn {
+    background-color: #dc3545;
+    /* Cor vermelha */
 }
 
 .resultado {
