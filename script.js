@@ -58,9 +58,9 @@ document.getElementById('calcularBtn').addEventListener('click', () => {
     } else if (diametroSelecionado === 3.40 || diametroSelecionado === 4.12 || diametroSelecionado === 5.20) {
         if (tempo >= 20 && tempo <= 100) {
             if (diametroSelecionado === 3.40) {
-                viscosidade = 3.85 * (tempo - 4.49);
+                viscosidade = 2.31 * (tempo - 6.58);
             } else if (diametroSelecionado === 4.12) {
-                viscosidade = 8.89 * (tempo - 2.9);
+                viscosidade = 3.85 * (tempo - 4.49);
             } else if (diametroSelecionado === 5.20) {
                 viscosidade = 12.1 * (tempo - 2);
             }
