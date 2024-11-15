@@ -31,7 +31,6 @@ document.getElementById('continuarBtn').addEventListener('click', () => {
 
 document.getElementById('calcularBtn').addEventListener('click', () => {
     const tempo = centesimos / 100;
-    console.log("tempo:", tempo);
     const radios = document.getElementsByName('diametro');
     let diametroSelecionado;
 
@@ -42,31 +41,46 @@ document.getElementById('calcularBtn').addEventListener('click', () => {
         }
     }
 
-    let viscosidade;
     if (diametroSelecionado === 1.90) {
-        viscosidade = 0.49 * (tempo - 35);
+        if (tempo >= 55 && tempo <= 100) {
+            viscosidade = 0.49 * (tempo - 35);
+        } else {
+            alert('Para o diâmetro de 1,90 mm, o tempo deve ser de 55 a 100 s!');
+            return;
+        }
     } else if (diametroSelecionado === 2.53) {
-        viscosidade = 1.44 * (tempo - 18);
-    } else if (diametroSelecionado === 3.40) {
-        viscosidade = 2.31 * (tempo - 6.58);
-    } else if (diametroSelecionado === 4.12) {
-        viscosidade = 3.85 * (tempo - 4.49);
-    } else if (diametroSelecionado === 5.20) {
-        viscosidade = 12.1 * (tempo - 2);
-    }
-
-    if (viscosidade !== undefined) {
-        document.getElementById('resultado').textContent = viscosidade.toFixed(2) + ' cSt';
-        document.getElementById('resetarBtn').style.display = 'inline-block';
+        if (tempo >= 40 && tempo <= 100) {
+            viscosidade = 1.44 * (tempo - 18);
+        } else {
+            alert('Para o diâmetro de 2,53 mm, o tempo deve ser de 40 a 100 s!');
+            return;
+        }
+    } else if (diametroSelecionado === 3.40 || diametroSelecionado === 4.12 || diametroSelecionado === 5.20) {
+        if (tempo >= 20 && tempo <= 100) {
+            if (diametroSelecionado === 3.40) {
+                viscosidade = 3.85 * (tempo - 4.49);
+            } else if (diametroSelecionado === 4.12) {
+                viscosidade = 8.89 * (tempo - 2.9);
+            } else if (diametroSelecionado === 5.20) {
+                viscosidade = 12.1 * (tempo - 2);
+            }
+        } else {
+            alert('Para os diâmetros de 3.40 mm, 4.12 mm e 5.20 mm, o tempo deve ser de 20 a 100 s!');
+            return;
+        }
     } else {
         alert('Selecione um diâmetro.');
+        return;
     }
+
+    document.getElementById('resultado').textContent = viscosidade.toFixed(2) + ' cSt';
+    document.getElementById('resetarBtn').style.display = 'inline-block';
 });
 
 document.getElementById('resetarBtn').addEventListener('click', () => {
     clearInterval(timer);
     centesimos = 0;
-    document.getElementById('cronometro').textContent = '00.00';
+    document.getElementById('cronometro').textContent = '0.00';
     document.getElementById('resultado').textContent = '---';
     document.getElementById('iniciarBtn').style.display = 'inline-block';
     document.getElementById('pararBtn').style.display = 'none';

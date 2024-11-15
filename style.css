@@ -13,6 +13,26 @@ body {
 .section {
     margin-bottom: 20px;
     text-align: center;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sectionSemBorda {
+    margin-bottom: 20px;
+    text-align: center;
+   
+}
+
+.sectionCronometro {
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
 }
 
 .cronometro {
@@ -24,8 +44,7 @@ body {
     /* Garante o alinhamento centralizado */
     padding: 10px;
     background-color: #f5f5f5;
-    border-radius: 8px;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    margin-left: 60px;
 }
 
 .btn {
