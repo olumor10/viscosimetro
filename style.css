@@ -39,9 +39,7 @@ body {
     font-size: 48px;
     margin-bottom: 10px;
     width: 100px;
-    /* Define a largura fixa */
     text-align: center;
-    /* Garante o alinhamento centralizado */
     padding: 10px;
     background-color: #f5f5f5;
     margin-left: 60px;
@@ -72,51 +70,32 @@ body {
     margin-top: 20px;
     color: #2c3e50;
     width: 400px;
-    /* Define a largura fixa */
     text-align: center;
-    /* Garante o alinhamento centralizado */
     padding: 10px;
     background-color: #f5f5f5;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo para input tipo radio */
 input[type="radio"] {
     appearance: none;
-    /* Remove o estilo padrão do rádio */
     width: 20px;
-    /* Define o tamanho da caixa de seleção */
     height: 20px;
-    /* Define a altura da caixa de seleção */
     border: 2px solid #000000;
-    /* Adiciona uma borda verde */
     border-radius: 4px;
-    /* Arredonda um pouco as bordas */
     background-color: #fff;
-    /* Cor de fundo branca */
     transition: background-color 0.3s, border 0.3s;
-    /* Transições suaves */
     cursor: pointer;
-    /* Altera o cursor para indicar que é clicável */
     margin-right: 10px;
-    /* Espaçamento entre a caixa de seleção e o texto */
 }
 
-/* Estilo para input radio quando checado */
 input[type="radio"]:checked {
     background-color: #28a745;
-    /* Cor de fundo verde quando selecionado */
     border-color: #28a745;
-    /* Borda verde quando selecionado */
 }
 
-/* Contêiner de flex para alinhamento */
 label {
     display: flex;
-    /* Usa flexbox para alinhar itens */
     align-items: center;
-    /* Alinha verticalmente */
     margin-left: 90px;
-    /* Define a margem à esquerda */
 }
