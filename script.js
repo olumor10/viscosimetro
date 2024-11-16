@@ -74,8 +74,8 @@ document.getElementById('calcularBtn').addEventListener('click', () => {
     }
 
     document.getElementById('resultado').textContent = viscosidade.toFixed(2) + ' cSt';
+    responsiveVoice.speak(String(viscosidade.toFixed(2)) + 'centistokes', 'Brazilian Portuguese Female', { rate: 1.2 });
     document.getElementById('resetarBtn').style.display = 'inline-block';
-    responsiveVoice.speak(String(viscosidade.toFixed(2)) + 'centistokes', 'Brazilian Portuguese Female', {rate:1.2});
 });
 
 document.getElementById('resetarBtn').addEventListener('click', () => {
